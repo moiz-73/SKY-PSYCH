@@ -1,0 +1,70 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.pytype_cache/
+.tox/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Telemetry outputs (CSV/JSON produced by runs)
+telemetry*.csv
+telemetry*.json
+*.out
+*.csv
+
+# OS files
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+*.png_original
+
+# Raw frames / capture artifacts (must never be persisted - privacy constraint)
+frames/
+captures/
+*.mp4.bak
+
+# MediaPipe / local model caches
+.mp_model_cache/
+
+# Agent-internal state (not product code)
+.opencode/

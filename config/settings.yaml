@@ -1,0 +1,44 @@
+# SkyPsych AI - default runtime settings
+# All values are local defaults. No cloud, no remote endpoints.
+
+camera:
+  width: 1280
+  height: 720
+  fps: 30
+  mirror: true
+
+ear:
+  threshold: 0.22
+  ema_alpha: 0.15
+  valid_blink_min_ms: 60
+  valid_blink_max_ms: 500
+  microsleep_min_ms: 500
+
+perclos:
+  window_seconds: 30
+
+head_pose:
+  pitch_limit_deg: 20.0
+  yaw_limit_deg: 25.0
+
+fatigue:
+  weights:
+    perclos: 0.35
+    blink_rate: 0.25
+    blink_duration: 0.20
+    head_deviation: 0.20
+  microsleep_penalty: 20.0
+
+severity:
+  caution_threshold: 40.0
+  alert_threshold: 70.0
+  microsleep_red_seconds: 3.0
+
+ui:
+  theme: dark
+  show_waveform: true
+  show_bars: true
+
+logging:
+  telemetry_only: true
+  save_raw_frames: false

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SkyPsych AI — Edge-Native Cognitive Fatigue Telemetry</title>
+<style>
+  :root{
+    --bg:#0a0e13;
+    --bg2:#10161e;
+    --panel:#131b25;
+    --line:#243140;
+    --txt:#d7e2ee;
+    --dim:#8fa3b8;
+    --green:#37e27a;
+    --yellow:#ffcf3f;
+    --red:#ff5d5d;
+    --cyan:#4fd6e8;
+    --mono:"Consolas","SFMono-Regular","Menlo",monospace;
+    --sans:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--txt);
+    font-family:var(--sans);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:0 24px 40px;}
+
+  /* hero */
+  header.hero{
+    text-align:center;
+    padding:72px 24px 48px;
+    background:
+      radial-gradient(1200px 420px at 50% -120px, rgba(79,214,232,.14), transparent 70%),
+      radial-gradient(900px 360px at 80% -80px, rgba(55,226,122,.10), transparent 60%),
+      linear-gradient(180deg,#0d141d,#0a0e13);
+    border-bottom:1px solid var(--line);
+  }
+  .hero .hudtop{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.35em;
+    color:var(--cyan);
+    text-transform:uppercase;
+    margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:52px;
+    font-weight:800;
+    letter-spacing:.02em;
+    color:#eef6ff;
+  }
+  .hero .sub{
+    margin-top:12px;
+    font-size:19px;
+    color:var(--dim);
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    font-weight:600;
+  }
+  .chips{margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .chip{
+    font-family:var(--mono);
+    font-weight:700;
+    font-size:14px;
+    letter-spacing:.18em;
+    padding:8px 22px;
+    border-radius:999px;
+    border:1px solid;
+  }
+  .chip.g{color:var(--green);border-color:rgba(55,226,122,.45);background:rgba(55,226,122,.08);}
+  .chip.y{color:var(--yellow);border-color:rgba(255,207,63,.45);background:rgba(255,207,63,.08);}
+  .chip.r{color:var(--red);border-color:rgba(255,93,93,.45);background:rgba(255,93,93,.08);}
+
+  /* sections */
+  section{margin-top:52px;}
+  .kicker{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.30em;
+    text-transform:uppercase;
+    color:var(--cyan);
+    margin-bottom:10px;
+  }
+  h2{
+    font-size:28px;
+    font-weight:700;
+    color:#eef6ff;
+    margin-bottom:14px;
+  }
+  p{margin-bottom:12px;color:var(--txt);}
+  .lead{color:var(--dim);font-size:17px;}
+
+  /* differentiation list */
+  ul.diff{list-style:none;margin-top:6px;}
+  ul.diff li{
+    padding:12px 16px;
+    margin-bottom:10px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-left:3px solid var(--cyan);
+    border-radius:6px;
+    display:flex;
+    gap:12px;
+    align-items:baseline;
+  }
+  ul.diff li b{color:#eef6ff;white-space:nowrap;}
+  ul.diff li span{color:var(--dim);}
+
+  /* market cards */
+  .markets{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:8px;}
+  .card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:16px 18px;
+  }
+  .card h3{font-size:15px;letter-spacing:.04em;color:var(--cyan);margin-bottom:6px;text-transform:uppercase;font-family:var(--mono);font-size:12px;}
+  .card p{color:var(--dim);font-size:14px;margin:0;}
+
+  /* demo timeline */
+  .timeline{margin-top:10px;}
+  .phase{
+    display:grid;
+    grid-template-columns:74px 1fr;
+    gap:16px;
+    padding:14px 16px;
+    margin-bottom:10px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:8px;
+    align-items:start;
+  }
+  .phase .badge{
+    font-family:var(--mono);
+    font-weight:700;
+    font-size:12px;
+    text-align:center;
+    padding:5px 0;
+    border-radius:5px;
+    border:1px solid;
+  }
+  .badge.g{color:var(--green);border-color:rgba(55,226,122,.5);background:rgba(55,226,122,.10);}
+  .badge.y{color:var(--yellow);border-color:rgba(255,207,63,.5);background:rgba(255,207,63,.10);}
+  .badge.r{color:var(--red);border-color:rgba(255,93,93,.5);background:rgba(255,93,93,.10);}
+  .badge.n{color:var(--dim);border-color:var(--line);background:#1a2330;}
+  .phase .time{font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.05em;margin-bottom:4px;}
+  .phase p{margin:0;font-size:15px;color:var(--txt);}
+  .phase p b{color:#eef6ff;}
+
+  /* privacy grid */
+  .priv{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:8px;}
+  .priv .card h3{color:var(--green);}
+  .priv .card h3.no{color:var(--red);}
+
+  /* caveat */
+  .caveat{
+    margin-top:12px;
+    padding:20px 22px;
+    background:rgba(255,207,63,.06);
+    border:1px solid rgba(255,207,63,.4);
+    border-radius:8px;
+  }
+  .caveat h3{color:var(--yellow);margin-bottom:8px;letter-spacing:.04em;text-transform:uppercase;font-size:14px;font-family:var(--mono);}
+  .caveat p{margin:0;color:var(--txt);}
+
+  footer{
+    margin-top:60px;
+    padding:22px 0 34px;
+    border-top:1px solid var(--line);
+    text-align:center;
+    color:var(--dim);
+    font-size:13px;
+    letter-spacing:.04em;
+  }
+  footer .small{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--yellow);margin-bottom:6px;}
+  @media(max-width:560px){
+    .hero h1{font-size:36px;}
+    .phase{grid-template-columns:1fr;gap:8px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hudtop">Local-only &middot; Edge-native &middot; Advisory</div>
+  <h1>SkyPsych AI</h1>
+  <div class="sub">Edge-native cognitive fatigue telemetry</div>
+  <div class="chips">
+    <span class="chip g">GREEN</span>
+    <span class="chip y">YELLOW</span>
+    <span class="chip r">RED</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <div class="kicker">01 / Problem</div>
+    <h2>Human error dominates aviation incidents</h2>
+    <p class="lead">Fatigue degrades perception, judgment, and reaction time <b>before</b> procedural errors occur. It is invisible to the outside observer, unreliable when self-reported, and nearly impossible to catch by eye alone.</p>
+    <p>By the time a mistake is visible, the fatigue behind it has been building for minutes. The error is the symptom; fatigue is the cause. SkyPsych exists to make the cause visible.</p>
+  </section>
+
+  <section>
+    <div class="kicker">02 / Solution</div>
+    <h2>An ordinary camera becomes a cognitive telemetry sensor</h2>
+    <p class="lead">SkyPsych AI reads involuntary micro-signals in the face &mdash; eyelid openness, blink rate and duration, eye-closure fraction (PERCLOS), and head-pose drift &mdash; and fuses them, in real time and locally, into a single 0&ndash;100 fatigue index.</p>
+    <p>No wearables. No specialized hardware. Just the webcam already in the room.</p>
+  </section>
+
+  <section>
+    <div class="kicker">03 / Why Now</div>
+    <h2>Computer vision, edge compute, and fatigue science have converged</h2>
+    <p class="lead">Face-landmark models now run in real time on a laptop. Edge compute means the whole pipeline stays on-device. And decades of fatigue science establish the observable ocular and postural signals the index is built on.</p>
+    <p>This capability previously required expensive headsets or EEG. Today it is a software layer &mdash; and that changes who can deploy it and where.</p>
+  </section>
+
+  <section>
+    <div class="kicker">04 / Product</div>
+    <h2>A local-only, privacy-preserving HUD</h2>
+    <p class="lead">An aviation-style display presents fatigue severity at a glance &mdash; <b>GREEN</b> normal, <b>YELLOW</b> rising fatigue, <b>RED</b> critical. A detected microsleep forces the highest alert immediately. When the operator is not visible, the system says so &mdash; it is never falsely green.</p>
+    <p>The interface is advisory. It reports an estimate; it performs no control actions, and it never claims to read a face it cannot see.</p>
+  </section>
+
+  <section>
+    <div class="kicker">05 / Differentiation</div>
+    <h2>Why SkyPsych is different</h2>
+    <ul class="diff">
+      <li><b>No headset.</b> <span>Only a camera already in the room.</span></li>
+      <li><b>No wristband.</b> <span>Nothing to charge, lose, or refuse to wear.</span></li>
+      <li><b>No cloud dependency.</b> <span>The entire pipeline runs locally in one process.</span></li>
+      <li><b>No raw frame storage.</b> <span>Frames exist transiently in memory; only abstract metrics persist.</span></li>
+      <li><b>Advisory, not replacement.</b> <span>It informs the human decision; it never replaces the operator.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="kicker">06 / Markets</div>
+    <h2>Where sustained attention is safety-critical</h2>
+    <div class="markets">
+      <div class="card"><h3>UAV Ground Control</h3><p>Remote pilots on long shifts &mdash; the closest and most urgent fit.</p></div>
+      <div class="card"><h3>Defense Simulation</h3><p>Hours-long training runs where sustained attention matters.</p></div>
+      <div class="card"><h3>Commercial Aviation</h3><p>Fatigue risk management programs that rely on self-report today.</p></div>
+      <div class="card"><h3>Rail, Mining, Trucking</h3><p>Operators behind sustained, monotonous attention.</p></div>
+      <div class="card"><h3>Remote Surgery</h3><p>Long, exacting procedures where focus cannot drop.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">07 / The Demo</div>
+    <h2>45 seconds, every state, one laptop</h2>
+    <p class="lead">The simulation runs the identical software on a deterministic 45-second timeline &mdash; no camera, no stored frames, same fusion, same HUD, same alerts.</p>
+    <div class="timeline">
+      <div class="phase"><div class="badge g">GREEN</div><div><div class="time">0&ndash;10s &middot; Normal</div><p><b>Healthy operator.</b> Alert baseline, normal blink dynamics.</p></div></div>
+      <div class="phase"><div class="badge y">YELLOW</div><div><div class="time">10&ndash;20s &middot; Rising</div><p><b>Fatigue signals rise.</b> Slower blinks, longer closures, more head deviation &mdash; flagged early.</p></div></div>
+      <div class="phase"><div class="badge r">RED</div><div><div class="time">20&ndash;26s &middot; Critical</div><p><b>Critical fatigue.</b> The moment a human should look and act.</p></div></div>
+      <div class="phase"><div class="badge r">MICROSLEEP</div><div><div class="time">26&ndash;30s &middot; Highest alert</div><p><b>Microsleep event.</b> The operator briefly lost awareness; the system forces the highest alert.</p></div></div>
+      <div class="phase"><div class="badge n">NO_FACE</div><div><div class="time">30&ndash;36s &middot; Honest loss of signal</div><p><b>Operator not visible.</b> The system says it cannot see them &mdash; it never pretends all is fine.</p></div></div>
+      <div class="phase"><div class="badge g">RECOVERY</div><div><div class="time">36&ndash;45s &middot; Return to normal</div><p><b>Recovery.</b> Fatigue is dynamic &mdash; the reading returns toward normal.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">08 / Privacy</div>
+    <h2>Privacy is the architecture, not a patch</h2>
+    <div class="priv">
+      <div class="card"><h3>No Cloud</h3><p>No network calls at runtime. Everything runs on the local machine.</p></div>
+      <div class="card"><h3>No Stored Video</h3><p>No raw frames, screenshots, or video persisted by default.</p></div>
+      <div class="card"><h3>Abstract Telemetry</h3><p>Exports are numbers only &mdash; blink rate, closures, head position, index. Nothing that reconstructs a face.</p></div>
+      <div class="card"><h3 class="no">Advisory Only</h3><p>Displays, chimes, logs. No control of any vehicle or system.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">09 / Honesty</div>
+    <h2>Advisory, early, and open about it</h2>
+    <div class="caveat">
+      <h3>Honest Caveat</h3>
+      <p>SkyPsych AI is an <b>advisory research MVP</b>. It estimates cognitive fatigue from an ordinary camera. It is <b>not</b> certified aviation equipment, <b>not</b> a medical device, and it does <b>not</b> prevent fatigue. Its rule-based index has not yet been validated at research grade against ground-truth measures, and it must never be used as the sole basis for a safety decision. It exists to make fatigue visible so a human can act sooner.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="small">Advisory research MVP &mdash; not certified aviation or medical equipment</div>
+    <p>SkyPsych AI &middot; Edge-native cognitive fatigue telemetry &middot; Camera-only &middot; Local-only</p>
+  </footer>
+
+</div>
+</body>
+</html>

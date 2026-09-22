@@ -1,0 +1,23 @@
+# SkyPsych AI dependencies (pinned to a compatible, verified set)
+# Note: these constraints match the canonical project venv at .venv (Python 3.11.1).
+
+# opencv-python: cv2 for video I/O and image processing. 4.x series; 5.x is not yet released/verified.
+opencv-python>=4.8.0,<5.0.0
+
+# mediapipe: hands/face solutions API. 1.x removed the solutions API; pin the last 0.x (0.10.21).
+mediapipe==0.10.21
+
+# numpy: mediapipe 0.10.x breaks under numpy 2.x; keep <2.0.0.
+numpy>=1.24.0,<2.0.0
+
+# scipy: scientific helpers used by validation/analysis.
+scipy>=1.10.0
+
+# PyYAML: loads config/settings.yaml.
+PyYAML>=6.0
+
+# pytest: test runner for validate.ps1.
+pytest>=7.0
+
+# protobuf: mediapipe depends on protobuf; 5.x breaks mediapipe 0.10.x. Keep <5.0.0.
+protobuf>=4.25.0,<5.0.0
