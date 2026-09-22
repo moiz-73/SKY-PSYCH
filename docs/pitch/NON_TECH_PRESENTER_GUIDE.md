@@ -1,4 +1,4 @@
-# SkyPsych AI — Presenter Guide for Non-Technical Friends
+# SkyPsych — Presenter Guide for Non-Technical Friends
 
 You can give this pitch. You do not need to understand cameras, code, or AI. You only need to read this sheet, click three things, and say the words in the quotes. That is the whole job.
 
@@ -26,7 +26,7 @@ You can give this pitch. You do not need to understand cameras, code, or AI. You
 ## During the pitch — exact click order
 
 1. Start your conversation. Say: **"Let me show you what fatigue looks like before it causes an incident."**
-2. **Double-click `02_SIM_DEMO.bat`.** The demo window opens. You will see the title **"SkyPsych AI (SIMULATION MODE)"**.
+2. **Double-click `02_SIM_DEMO.bat`.** The demo window opens. You will see the title **"SkyPsych (SIMULATION MODE)"**.
 3. **Narrate the 45-second timeline** — the phases change on their own; you just read:
 
 | When | Screen says | Say |

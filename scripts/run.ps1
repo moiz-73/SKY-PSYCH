@@ -1,5 +1,5 @@
 # run.ps1
-# Runs the SkyPsych AI main entry point with the project venv interpreter.
+# Runs the SkyPsych main entry point with the project venv interpreter.
 # PowerShell 5.1 compatible. Uses the call operator + array splicing so paths with spaces work.
 #
 # Parameters:

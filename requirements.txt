@@ -1,4 +1,4 @@
-# SkyPsych AI dependencies (pinned to a compatible, verified set)
+# SkyPsych dependencies (pinned to a compatible, verified set)
 # Note: these constraints match the canonical project venv at .venv (Python 3.11.1).
 
 # opencv-python: cv2 for video I/O and image processing. 4.x series; 5.x is not yet released/verified.

@@ -1,6 +1,6 @@
-# SkyPsych AI - Simulation Mode
+# SkyPsych - Simulation Mode
 
-Simulation mode runs the **full SkyPsych AI pipeline with no webcam and no
+Simulation mode runs the **full SkyPsych pipeline with no webcam and no
 MediaPipe face detection**. It is designed for demos and test runs: a presenter
 opens the same security HUD and the same headless telemetry export they would
 get from a live camera, driven entirely by a deterministic in-memory fatigue

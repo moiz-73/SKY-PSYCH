@@ -1,4 +1,4 @@
-"""SkyPsych AI - shared telemetry contract.
+"""SkyPsych - shared telemetry contract.
 
 This module defines the single dataclass and type aliases that every pipeline
 stage (ingestion -> vision -> telemetry -> fusion -> alerts -> HUD) exchanges.

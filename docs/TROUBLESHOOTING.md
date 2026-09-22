@@ -1,4 +1,4 @@
-# SkyPsych AI — Troubleshooting & Presenter Recovery
+# SkyPsych — Troubleshooting & Presenter Recovery
 
 Plain-English guide for non-technical presenters. You only ever need to
 double-click files. No typing required unless a section says so.

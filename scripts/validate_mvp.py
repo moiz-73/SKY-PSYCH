@@ -1,4 +1,4 @@
-"""SkyPsych AI MVP validation script (camera-free, deterministic).
+"""SkyPsych MVP validation script (camera-free, deterministic).
 
 Runs the full set of contract checks against the production modules using
 synthetic inputs only. Nothing here requires a camera, a live video source,

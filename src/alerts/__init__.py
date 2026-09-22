@@ -1,4 +1,4 @@
-"""SkyPsych AI - alerts subpackage.
+"""SkyPsych - alerts subpackage.
 
 Advisory, rate-limited, privacy-preserving alerting built on the severity
 stream produced by the fatigue fusion layer:

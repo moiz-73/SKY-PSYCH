@@ -1,4 +1,4 @@
-"""SkyPsych AI - test suite.
+"""SkyPsych - test suite.
 
 Owned by: telemetry agent.
 """

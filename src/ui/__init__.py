@@ -1,4 +1,4 @@
-"""SkyPsych AI - ui subpackage (dark aviation-style HUD).
+"""SkyPsych - ui subpackage (dark aviation-style HUD).
 
 Owned by: ui agent (this goal).
 

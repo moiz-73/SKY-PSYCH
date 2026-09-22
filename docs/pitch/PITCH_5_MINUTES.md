@@ -1,4 +1,4 @@
-# SkyPsych AI — Five-Minute Pitch
+# SkyPsych — Five-Minute Pitch
 
 *(~800–900 words, ~5 minutes at a normal pace. The "Live demo guidance" section tells you what the screen is doing so you can talk over it. PITCH_2_MINUTES.md is the short version.)*
 
@@ -30,7 +30,7 @@ None of these need a device on the body — they're visible on the face and meas
 
 ## 4. The solution — camera as sensor
 
-SkyPsych AI turns the camera you already have into a cognitive telemetry sensor. The engineering is deliberately honest:
+SkyPsych turns the camera you already have into a cognitive telemetry sensor. The engineering is deliberately honest:
 
 - Computer vision (MediaPipe FaceMesh) extracts facial landmarks in real time from an ordinary webcam.
 - Deterministic, rule-based logic — not a black box — computes eye openness, blink dynamics, closure fraction, and head-pose deviation.

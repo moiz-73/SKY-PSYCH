@@ -1,4 +1,4 @@
-"""SkyPsych AI - MVP CLI entrypoint and full pipeline wiring.
+"""SkyPsych - MVP CLI entrypoint and full pipeline wiring.
 
 Owned by: integration agent (this goal).
 
@@ -68,7 +68,7 @@ def parse_args(argv=None):
     """Parse the CLI surface required by the MVP runbook."""
     parser = argparse.ArgumentParser(
         prog="skypsych-ai",
-        description="SkyPsych AI - edge-native cognitive fatigue telemetry MVP.",
+        description="SkyPsych - edge-native cognitive fatigue telemetry MVP.",
     )
     parser.add_argument(
         "--source",
@@ -406,7 +406,7 @@ def _run_simulation(args, config):
                 hud.draw(frame, point, dt=dt)
                 _draw_sim_caption(frame)
                 try:
-                    cv2.imshow("SkyPsych AI - SIMULATION MODE", frame)
+                    cv2.imshow("SkyPsych - SIMULATION MODE", frame)
                     key = cv2.waitKey(1) & 0xFF
                     if key in (ord("q"), ord("Q"), 27):  # Q or ESC
                         break
@@ -643,7 +643,7 @@ def run(args, config=None):
                 loop_dt = time.monotonic() - loop_t0
                 hud.draw(processed, point, dt=loop_dt)
                 try:
-                    cv2.imshow("SkyPsych AI", processed)
+                    cv2.imshow("SkyPsych", processed)
                     key = cv2.waitKey(1) & 0xFF
                     if key in (ord("q"), ord("Q"), 27):  # Q or ESC
                         break

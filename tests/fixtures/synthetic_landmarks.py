@@ -1,7 +1,7 @@
 """Synthetic landmark generators for deterministic unit tests.
 
 Produces NumPy arrays with at least 468 rows and 2 columns (pixel-space x, y),
-matching the MediaPipe-style face-mesh landmark layout used by SkyPsych AI.
+matching the MediaPipe-style face-mesh landmark layout used by SkyPsych.
 
 Eye geometry follows the EAR definition used by ``src/telemetry/ear.py``:
 

@@ -1,4 +1,4 @@
-# SkyPsych AI — Demo Talk-Track
+# SkyPsych — Demo Talk-Track
 
 Word-by-word narration timed to the 45-second simulation timeline. Run the simulation (`02_SIM_DEMO.bat`), then read the line that matches the phase on screen. Speak slowly — the simulation is the star; your words just frame it.
 
@@ -38,7 +38,7 @@ Keep going — the simulation is your guaranteed demo.
 
 ## Practical notes for the demo window
 
-- The window title shows **SkyPsych AI (SIMULATION MODE)** during the simulated demo.
+- The window title shows **SkyPsych (SIMULATION MODE)** during the simulated demo.
 - Press **Q** or **ESC** to close the demo window and return to your presentation.
 - The severity banner and warning text move on their own — you do not need to click anything during the 45 seconds.
 - If telemetry text scrolls in a terminal behind the window, ignore it; it is the same data, exported to numbers only.

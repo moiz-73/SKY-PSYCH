@@ -1,4 +1,4 @@
-# SkyPsych AI — Likely Questions and Honest Answers
+# SkyPsych — Likely Questions and Honest Answers
 
 *(For investors and prospects. Every answer is short, and every answer is honest.)*
 
@@ -15,7 +15,7 @@ An ordinary webcam. That is the entire requirement. MediaPipe FaceMesh runs in r
 Real-time and fully local. The pipeline processes each frame and updates the HUD continuously; there is no round-trip to a server. Perceived lag is near-instant (frame-rate bound, plus a small smoothing delay built into the metrics).
 
 ## 5. How is this different from fatigue wearables (wristbands, EEG headsets)?
-Wearables require hardware to buy, charge, wear, and accept. SkyPsych AI is software-only on hardware that already exists. It can be deployed across a fleet by installing an app. It is also non-contact, so crews have nothing to refuse — which is often the single biggest adoption barrier.
+Wearables require hardware to buy, charge, wear, and accept. SkyPsych is software-only on hardware that already exists. It can be deployed across a fleet by installing an app. It is also non-contact, so crews have nothing to refuse — which is often the single biggest adoption barrier.
 
 ## 6. Is it certified? Is it approved by the FAA or EASA?
 No. It is an advisory research MVP with no regulatory certifications. Aviation certification (FAA/EASA) and medical standing are explicitly future work and not achieved. We say this unambiguously, because it is a safety-adjacent field and trust matters more than optics.

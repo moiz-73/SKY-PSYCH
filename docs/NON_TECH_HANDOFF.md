@@ -1,4 +1,4 @@
-# SkyPsych AI - Handoff for a Non-Technical Presenter
+# SkyPsych - Handoff for a Non-Technical Presenter
 
 Written for a person who will present this demo but is not an engineer.
 **You do not need to type a single command.** Everything is a double-click.
@@ -7,7 +7,7 @@ Written for a person who will present this demo but is not an engineer.
 
 ## What this product does (in plain English)
 
-SkyPsych AI watches for signs of tiredness in a person's eyes and head
+SkyPsych watches for signs of tiredness in a person's eyes and head
 movements and shows them as colored warning lights - a fatigue "check engine
 light" for an operator. It runs entirely on the computer in front of you, saves
 no video or photos, and only gives advice (it never takes control of anything).

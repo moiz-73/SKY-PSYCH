@@ -1,4 +1,4 @@
-# SkyPsych AI — Privacy, Safety & Constraint Audit
+# SkyPsych — Privacy, Safety & Constraint Audit
 
 Audit owner: SUBAGENT D (Privacy, Safety, and Constraint Audit Agent)
 Canonical interpreter: `.\.venv\Scripts\python.exe`

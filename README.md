@@ -1,4 +1,4 @@
-# SkyPsych AI
+# SkyPsych
 
 Privacy-preserving, edge-native cognitive-fatigue telemetry MVP for operators. Runs entirely on your machine — no cloud, no ML training, no raw-image persistence.
 

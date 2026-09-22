@@ -1,4 +1,4 @@
-# SkyPsych AI — Pitch-Readiness Certification
+# SkyPsych — Pitch-Readiness Certification
 
 **Date:** 2026-08-05
 **Certification agent:** SUBAGENT D — End-to-End QA and Simulation Certification

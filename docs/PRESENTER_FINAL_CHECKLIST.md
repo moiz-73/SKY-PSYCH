@@ -1,4 +1,4 @@
-# Presenter Final Checklist - SkyPsych AI Demo
+# Presenter Final Checklist - SkyPsych Demo
 
 One page. Everything is a double-click - no typing required.
 

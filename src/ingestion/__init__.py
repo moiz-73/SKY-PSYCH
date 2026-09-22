@@ -1,4 +1,4 @@
-"""SkyPsych AI - ingestion subpackage.
+"""SkyPsych - ingestion subpackage.
 
 Owned by: ingestion agent.
 

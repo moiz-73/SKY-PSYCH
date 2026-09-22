@@ -1,4 +1,4 @@
-# SkyPsych AI - MVP Runbook
+# SkyPsych - MVP Runbook
 
 Step-by-step guide to set up the environment and run the MVP on Windows.
 Everything below was verified against the canonical interpreter

@@ -1,4 +1,4 @@
-# SkyPsych AI - Architecture
+# SkyPsych - Architecture
 
 Edge-native, privacy-preserving cognitive-fatigue telemetry for operators.
 

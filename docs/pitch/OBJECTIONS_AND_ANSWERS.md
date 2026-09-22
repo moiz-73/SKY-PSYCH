@@ -1,4 +1,4 @@
-# SkyPsych AI — Objections and Answers
+# SkyPsych — Objections and Answers
 
 *(Ten objections, ten confident, honest answers. Keep your tone steady — never defensive.)*
 
@@ -30,7 +30,7 @@ This concern is why privacy is the product's architecture, not a patch: no cloud
 Fair, so let's be precise about the risk management: it is advisory only, it performs no control action, and it explicitly must not be the sole basis for a safety decision — that framing is part of the design, not a weasel word. The bigger liability we all live with is fatigue that goes unseen until an incident. Making fatigue visible is how teams reduce that underlying liability.
 
 ## 10. "Can't this be done with a phone app?"
-Yes — and that's encouraging, not a threat. A consumer phone that already has a camera is one more deployment surface for the same engine. But the security, privacy, mounting, power, and integration requirements of an aviation and defense control station point to a rugged local software layer on operator workstations, which is exactly what SkyPsych AI is. Phone support is a natural future downstream surface, not the core product today.
+Yes — and that's encouraging, not a threat. A consumer phone that already has a camera is one more deployment surface for the same engine. But the security, privacy, mounting, power, and integration requirements of an aviation and defense control station point to a rugged local software layer on operator workstations, which is exactly what SkyPsych is. Phone support is a natural future downstream surface, not the core product today.
 
 ---
 

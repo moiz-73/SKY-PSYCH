@@ -2,7 +2,7 @@ WELCOME TO SKYPSYCH AI - READ ME FIRST
 ======================================
 
 What it is (one sentence):
-SkyPsych AI is a computer program that watches for signs of
+SkyPsych is a computer program that watches for signs of
 tiredness and shows them as colored warning lights, like a
 fatigue "check engine light" for an operator.
 

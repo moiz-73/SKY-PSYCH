@@ -1,4 +1,4 @@
-# SkyPsych AI — Two-Minute Pitch
+# SkyPsych — Two-Minute Pitch
 
 *(~350–400 words. Aim for about 2 minutes at a calm speaking pace. Pause on the demo, let the screen do the talking.)*
 
@@ -9,7 +9,7 @@ Every aviation professional knows the same uncomfortable truth: human error is t
 Today, monitoring operator state usually means wearables — headsets, wristbands, EEG caps. They are uncomfortable, expensive to deploy across a fleet, easy to refuse, and hard to keep charged and calibrated. For a remote UAV operator on a long shift, the barrier is simply too high to use at all.
 
 ## The solution
-SkyPsych AI removes that barrier. We turned the camera you already have into a cognitive telemetry sensor. Computer vision reads involuntary micro-signals in the face — eyelid openness, blink rate, eye-closure duration, head-position drift — and fuses them, locally and in real time, into a 0-to-100 fatigue index on an aviation-style HUD.
+SkyPsych removes that barrier. We turned the camera you already have into a cognitive telemetry sensor. Computer vision reads involuntary micro-signals in the face — eyelid openness, blink rate, eye-closure duration, head-position drift — and fuses them, locally and in real time, into a 0-to-100 fatigue index on an aviation-style HUD.
 
 ## The demo
 Let me show you what I mean. *(Start the simulation.)* The system walks through every state: **GREEN** — a normal operator. Fatigue signals rise and it moves to **YELLOW**, then **RED**, flagging critical fatigue. It detects a **microsleep** and levels its highest alert. Coverage is lost and the system honestly says it **cannot see** the operator — it never draws a false "all clear." Then it recovers. *(Close the demo.)* All of that ran on one laptop, with no camera feed ever saved.

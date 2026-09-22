@@ -1,4 +1,4 @@
-"""SkyPsych AI - vision subpackage (MediaPipe FaceMesh).
+"""SkyPsych - vision subpackage (MediaPipe FaceMesh).
 
 Owned by: vision agent.
 

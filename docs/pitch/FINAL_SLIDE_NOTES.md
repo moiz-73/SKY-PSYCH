@@ -1,4 +1,4 @@
-# SkyPsych AI — Final Slide Notes
+# SkyPsych — Final Slide Notes
 
 *(Speaker notes for the closing slide. The slide itself should carry the vision line and the three color chips; these notes are what you say.)*
 

@@ -1,4 +1,4 @@
-# SkyPsych AI - local logging configuration
+# SkyPsych - local logging configuration
 # Console output by default, optional file output.
 # No remote logging endpoint (privacy constraint: no cloud dependency).
 

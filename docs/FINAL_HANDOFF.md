@@ -1,6 +1,6 @@
-# SkyPsych AI - Final Handoff
+# SkyPsych - Final Handoff
 
-Release documentation for the SkyPsych AI cognitive-fatigue telemetry MVP at
+Release documentation for the SkyPsych cognitive-fatigue telemetry MVP at
 `F:\SKY PSYCH\skypsych-ai`. This document is the final handoff from the release
 and documentation agent.
 
@@ -41,7 +41,7 @@ typing required:
 
 ## 1. Executive summary
 
-SkyPsych AI is a working, edge-native MVP that estimates operator cognitive
+SkyPsych is a working, edge-native MVP that estimates operator cognitive
 fatigue from a webcam or video file using MediaPipe FaceMesh landmarks and
 rule-based (not learned) fusion. The entire pipeline
 (`ingestion -> vision -> telemetry -> fusion -> alerts -> HUD`) runs locally
@@ -221,7 +221,7 @@ RED 89.67, microsleep-forces-RED 32.15, NO_FACE t0/t6 = YELLOW) are in
 
 ## 7. Advisory-not-certified disclaimer
 
-SkyPsych AI is an **advisory research MVP**, not a certified aviation safety
+SkyPsych is an **advisory research MVP**, not a certified aviation safety
 system. It is not a substitute for certified flight-safety equipment, and it
 must **never** be used as the sole basis for safety decisions in flight or any
 other safety-critical operation. It performs no control of any vehicle or

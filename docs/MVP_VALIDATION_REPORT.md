@@ -1,6 +1,6 @@
-# SkyPsych AI - MVP Validation Report
+# SkyPsych - MVP Validation Report
 
-Recorded validation results for the SkyPsych AI MVP at
+Recorded validation results for the SkyPsych MVP at
 `F:\SKY PSYCH\skypsych-ai`. All commands were executed for real on this
 machine and captured below.
 
